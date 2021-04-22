@@ -47,7 +47,7 @@ function HamburMenuIcon(props: HamburMenuIconProps) {
 function Logo() {
   return (
     <li className="nav-item">
-      <ul className="nav-lik logo">NotesFlow</ul>
+      <a className="nav-lik logo">NotesFlow</a>
     </li>
   );
 }
