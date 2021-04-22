@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+
+$colors: (
+  green: #3ba853,
+  violet: #3300ff,
+  blue: #00a3ff,
+);
+
+$gray-colors: (
+  gray1: #ffffff,
+  gray2: #fefefe,
+  gray3: #ebebeb,
+  gray4: #8d8d8d,
+  gray5: #282828,
+  gray6: #232323,
+);
+
+@mixin default-theme {
+  --background: var(--gray6);
+  --text-color: var(--gray3);
+  --h-color: var(--gray0);
+
+  --nav-color: var(--gray5);
+  --nav-icon-color: var(--blue-light);
+  --nav-shadow: 4px 4px 10px -3px #010101;
+  transition: all 0.3s ease;
+}
+
+.light-theme {
+  --background: var(--gray2);
+  --text-color: var(--gray5);
+  --h-color: var(--gray6);
+
+  --nav-color: var(--gray2);
+  --nav-icon-color: var(--blue-dark);
+  --nav-shadow: 4px 4px 10px -3px #c1c1c1;
+  transition: all 0.5s ease;
+}
+
+.dark-theme {
+  @include default-theme;
+}
+
+:root {
+  @each $name, $color in $colors {
+    --#{$name}: #{$color};
+    --#{$name}-dark: #{darken($color, 7%)};
+    --#{$name}-light: #{lighten($color, 7%)};
+  }
+
+  @each $gray, $color in $gray-colors {
+    --#{$gray}: #{$color};
+  }
+
+  --font-head: "Prompt", sans-serif;
+  --font-body: "Jost", sans-serif;
+  --font-size: 20px;
+
+  --green-grad: linear-gradient(
+    to bottom right,
+    var(--green-light),
+    var(--green-dark) 85%
+  );
+
+  --violet-grad: linear-gradient(
+    to bottom right,
+    var(--violet-light),
+    var(--violet-dark) 85%
+  );
+
+  @include default-theme;
+}
+
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  font-family: var(--font-body);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}

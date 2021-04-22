@@ -1,0 +1,60 @@
+$navbar-padding: 1rem 3rem;
+$nav-height: 70px;
+
+.navbar {
+  width: 100%;
+  height: $nav-height;
+
+  padding: $navbar-padding;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  box-shadow: var(--nav-shadow);
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+// hiding hamburger menu icon and theme icon in ul.left
+.navbar .left {
+  .menu-icon,
+  .theme-icon {
+    display: none;
+  }
+}
+
+.navbar .right .nav-item .text {
+  display: none;
+}
+
+// logo
+.navbar .nav-item .logo {
+  font-size: 2em;
+  font-weight: bold;
+  font-family: var(--font-head);
+}
+
+// right navbar elements
+.navbar .right .icon svg {
+  height: 30px;
+  width: 30px;
+
+  .fa-primary {
+    fill: var(--nav-icon-color);
+  }
+
+  .fa-secondary {
+    fill: var(--nav-icon-color);
+    opacity: 0.4;
+  }
+}
+
+.navbar .right {
+  width: 18vw;
+  display: flex;
+  justify-content: space-between;
+}
