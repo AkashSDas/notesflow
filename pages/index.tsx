@@ -46,7 +46,7 @@ export const getStaticProps: GetStaticProps = async () => {
     filePaths.forEach((filePath: string) => {
       const content = fs.readFileSync(filePath).toString();
       contents.push(
-        new Content(Content.extractMetaDataFromContentStr(content))
+        new Content(Content.extractMetaDataFromContentStr(content, filePath))
       );
     });
 

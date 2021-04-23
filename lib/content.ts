@@ -7,6 +7,7 @@ interface ContentInterface {
   content: string;
   coverImageUrl: string;
   coverGifUrl: string;
+  filePath: string;
 }
 
 class Content {
@@ -18,6 +19,7 @@ class Content {
   content: string;
   coverImageUrl: string;
   coverGifUrl: string;
+  filePath: string;
 
   constructor(data: ContentInterface) {
     this.title = data.title;
@@ -28,6 +30,7 @@ class Content {
     this.content = data.content;
     this.coverImageUrl = data.coverImageUrl;
     this.coverGifUrl = data.coverGifUrl;
+    this.filePath = data.filePath;
   }
 
   static convertStringToDate = (dateStr: string): Date => {
@@ -35,7 +38,8 @@ class Content {
   };
 
   static extractMetaDataFromContentStr = (
-    content: string
+    content: string,
+    filePath: string
   ): ContentInterface => {
     /**
      * contentList metadata shape
@@ -105,6 +109,7 @@ class Content {
       coverImageUrl,
       coverGifUrl,
       content: postContent,
+      filePath,
     };
   };
 }
