@@ -18,3 +18,36 @@
   background: var(--text-color);
   color: var(--background);
 }
+
+// TAGS
+
+.tag-stock-market {
+  background: #2775c3;
+  color: white;
+}
+
+.tag-investing {
+  background: var(--green);
+  color: white;
+}
+
+.tag-short-selling {
+  background: #dc0530;
+  color: #fff;
+}
+
+.tag-accounting {
+  color: white;
+  background: var(--purple-light);
+}
+
+.tag-revenues,
+.tag-expenses {
+  background: var(--text-color);
+  color: var(--background);
+}
+
+.tag-accural-accounting {
+  background: var(--pink);
+  color: var(--gray0);
+}
