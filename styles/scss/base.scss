@@ -34,6 +34,9 @@ $gray-colors: (
 
   --blue-vertical-line-color: var(--blue-dark);
 
+  --code-color: var(--purple-light);
+  --code-bg: var(--gray5);
+
   --nav-color: var(--gray5);
   --nav-icon-color: var(--blue-light);
   --nav-shadow: 4px 4px 10px -3px #010101;
@@ -51,6 +54,9 @@ $gray-colors: (
   --card-hover-bg: var(--gray3);
 
   --blue-vertical-line-color: var(--blue-light);
+
+  --code-color: var(--purple-dark);
+  --code-bg: var(--gray3);
 
   --nav-color: var(--gray2);
   --nav-icon-color: var(--blue-dark);
@@ -127,4 +133,11 @@ main {
   margin-bottom: 2rem;
   border: none;
   border-bottom: 2px dashed var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  color: var(--h-color);
 }
