@@ -2,9 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 
 $colors: (
-  green: #3ba853,
+  // green: #3ba853,
   violet: #3300ff,
-  blue: #00a3ff,
+  // blue: #00a3ff,
+  red: hsl(348, 100%, 61%),
+  blue: #498afb,
+  orange: #fa8142,
+  green: #09c372,
+  purple: hsl(265, 50%, 60%),
+  yellow: hsl(48, 100%, 67%),
+  pink: #ff4088
 );
 
 $gray-colors: (
@@ -20,6 +27,12 @@ $gray-colors: (
   --background: var(--gray6);
   --text-color: var(--gray3);
   --h-color: var(--gray0);
+  --text-color-2: #b2becd;
+
+  --card-bg: var(--gray5);
+  --card-hover-bg: var(--gray4);
+
+  --blue-vertical-line-color: var(--blue-dark);
 
   --nav-color: var(--gray5);
   --nav-icon-color: var(--blue-light);
@@ -32,6 +45,12 @@ $gray-colors: (
   --background: var(--gray2);
   --text-color: var(--gray5);
   --h-color: var(--gray6);
+  --text-color-2: #454e56;
+
+  --card-bg: var(--gray1);
+  --card-hover-bg: var(--gray3);
+
+  --blue-vertical-line-color: var(--blue-light);
 
   --nav-color: var(--gray2);
   --nav-icon-color: var(--blue-dark);
@@ -97,4 +116,15 @@ ul {
 a {
   color: unset;
   text-decoration: none;
+}
+
+main {
+  margin: 8rem 7rem;
+}
+
+.hr {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: none;
+  border-bottom: 2px dashed var(--text-color);
 }

@@ -72,6 +72,14 @@ class Content {
         splittedStr[4]
       }`;
     };
+    const splitFromColorForUrls = (url: string) => {
+      // empty url
+      if (url.split(":")[1].trim() === '""') return url.split(":")[1].trim();
+
+      const httpsStr = url.split(":")[1].trim().split('"')[1];
+      const remainingUrl = url.split(":")[2].split('"')[0];
+      return [httpsStr, remainingUrl].join(":");
+    };
 
     const title = splitFromColonAndGetValue(contentList[1]);
     const description = splitFromColonAndGetValue(contentList[2]);
@@ -95,10 +103,9 @@ class Content {
     const publishdate = Content.convertStringToDate(
       splitFromColonAndGetDateValue(contentList[tagCounter + 1])
     );
-    const coverImageUrl = splitFromColonAndGetValue(
-      contentList[tagCounter + 2]
-    );
-    const coverGifUrl = splitFromColonAndGetValue(contentList[tagCounter + 3]);
+
+    const coverImageUrl = splitFromColorForUrls(contentList[tagCounter + 2]);
+    const coverGifUrl = splitFromColorForUrls(contentList[tagCounter + 3]);
 
     // +4 to skip two '---' and blank lines
     const postContent = contentList
