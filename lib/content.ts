@@ -102,11 +102,6 @@ class Content {
       .splice(tagCounter + 3 + 4, contentList.length)
       .join("\n");
 
-    console.log(
-      lastmod,
-      splitFromColonAndGetDateValue(contentList[tagCounter])
-    );
-
     return {
       title,
       description,
