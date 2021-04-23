@@ -10,8 +10,11 @@ $nav-height: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background: var(--background);
 
   box-shadow: var(--nav-shadow);
+
+  position: fixed;
 }
 
 .navbar .navbar-nav {
@@ -25,6 +28,8 @@ $nav-height: 70px;
   .theme-icon {
     display: none !important;
   }
+
+  background: var(--background);
 }
 
 .navbar .right .nav-item .text {
@@ -79,6 +84,7 @@ $nav-height: 70px;
 .navbar .right {
   width: 18vw;
   display: flex;
+  background: var(--background);
   justify-content: space-between;
 }
 
