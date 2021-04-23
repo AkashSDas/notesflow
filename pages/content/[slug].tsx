@@ -19,11 +19,23 @@ function ContentPage(props: ContentPageProps) {
 
   const content: Content = JSON.parse(props.content);
 
+  const tagBtn = (tag: string, key: number) => (
+    <span key={key} className={`tag tag-sm tag-${tag}`}>
+      #{tag}
+    </span>
+  );
+
   return (
     <main>
       <h1>{content.title}</h1>
 
       <div className="hr"></div>
+
+      <div className="content-info">
+        <div className="tags-group">
+          {content.tags.map((tag: string, idx: number) => tagBtn(tag, idx))}
+        </div>
+      </div>
 
       {/* <img src={`${content.coverGifUrl}`} alt={`${content.title}`} /> */}
 
