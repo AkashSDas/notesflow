@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Content from "../../lib/content";
 
 interface ContentListProps {
@@ -31,27 +32,36 @@ function ContentList(props: ContentListProps) {
         {props.contents &&
           props.contents.map((content: Content, idx: number) => {
             return (
-              <li key={idx} className="list-item">
-                <div className="vertical-line"></div>
+              <Link
+                href={{
+                  pathname: `/content/${content.fileName}`,
+                  // query: {
+                  //   filePath: content.filePath,
+                  // },
+                }}
+              >
+                <li key={idx} className="list-item">
+                  <div className="vertical-line"></div>
 
-                {/* <div className="cover-img">
+                  {/* <div className="cover-img">
                   <img
                     src={`${content.coverGifUrl}`}
                     alt={`${content.title}`}
                   />
                 </div> */}
 
-                <div className="content-info">
-                  <h3>{content.title}</h3>
-                  <p>{content.description}</p>
+                  <div className="content-info">
+                    <h3>{content.title}</h3>
+                    <p>{content.description}</p>
 
-                  <div className="tags-group">
-                    {content.tags.map((tag: string, idx: number) =>
-                      tagBtn(tag, idx)
-                    )}
+                    <div className="tags-group">
+                      {content.tags.map((tag: string, idx: number) =>
+                        tagBtn(tag, idx)
+                      )}
+                    </div>
                   </div>
-                </div>
-              </li>
+                </li>
+              </Link>
             );
           })}
       </ul>

@@ -212,4 +212,10 @@ export const getContents = (basePath: string): Content[] => {
   return contents;
 };
 
+// Read markdown data for single file
+export const getContent = (filePath: string): Content => {
+  const content = fs.readFileSync(filePath).toString();
+  return new Content(Content.extractMetaDataFromContentStr(content, filePath));
+};
+
 export default Content;
