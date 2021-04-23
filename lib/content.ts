@@ -11,6 +11,7 @@ interface ContentInterface {
   coverImageUrl: string;
   coverGifUrl: string;
   filePath: string;
+  fileName: string;
 }
 
 class Content {
@@ -23,6 +24,7 @@ class Content {
   coverImageUrl: string;
   coverGifUrl: string;
   filePath: string;
+  fileName: string;
 
   constructor(data: ContentInterface) {
     this.title = data.title;
@@ -34,6 +36,7 @@ class Content {
     this.coverImageUrl = data.coverImageUrl;
     this.coverGifUrl = data.coverGifUrl;
     this.filePath = data.filePath;
+    this.fileName = data.fileName;
   }
 
   static convertStringToDate = (dateStr: string): Date => {
@@ -112,6 +115,10 @@ class Content {
       .splice(tagCounter + 3 + 4, contentList.length)
       .join("\n");
 
+    const fileName = filePath.split(path.sep)[
+      filePath.split(path.sep).length - 1
+    ];
+
     return {
       title,
       description,
@@ -122,6 +129,7 @@ class Content {
       coverGifUrl,
       content: postContent,
       filePath,
+      fileName,
     };
   };
 
