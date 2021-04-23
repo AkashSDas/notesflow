@@ -65,7 +65,9 @@ class Content {
     const splitFromColonAndGetDateValue = (dateStr: string) => {
       // [ 'lastmod', ' 2020-12-04T13', '53', '06' ]
       const splittedStr = dateStr.split(":");
-      return `${splittedStr[1].trim()}:${splittedStr[2]}:${splittedStr[3]}`;
+      return `${splittedStr[1].trim()}:${splittedStr[2]}:${splittedStr[3]}:${
+        splittedStr[4]
+      }`;
     };
 
     const title = splitFromColonAndGetValue(contentList[1]);
@@ -100,6 +102,11 @@ class Content {
       .splice(tagCounter + 3 + 4, contentList.length)
       .join("\n");
 
+    console.log(
+      lastmod,
+      splitFromColonAndGetDateValue(contentList[tagCounter])
+    );
+
     return {
       title,
       description,
@@ -111,6 +118,14 @@ class Content {
       content: postContent,
       filePath,
     };
+  };
+
+  static sortContentsWithLastModDate = (
+    contents: Content[],
+    ascending = true
+  ) => {
+    if (ascending) contents.sort((a, b) => (a.lastmod < b.lastmod ? -1 : 1));
+    else contents.sort((a, b) => (a.lastmod > b.lastmod ? -1 : 1));
   };
 }
 
