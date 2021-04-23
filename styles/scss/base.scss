@@ -24,6 +24,7 @@ $gray-colors: (
   --nav-color: var(--gray5);
   --nav-icon-color: var(--blue-light);
   --nav-shadow: 4px 4px 10px -3px #010101;
+  --shadow-color: #010101;
   transition: all 0.3s ease;
 }
 
@@ -35,6 +36,7 @@ $gray-colors: (
   --nav-color: var(--gray2);
   --nav-icon-color: var(--blue-dark);
   --nav-shadow: 4px 4px 10px -3px #c1c1c1;
+  --shadow-color: #c1c1c1;
   transition: all 0.5s ease;
 }
 
