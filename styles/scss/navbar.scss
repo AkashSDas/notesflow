@@ -23,7 +23,7 @@ $nav-height: 70px;
 .navbar .left {
   .menu-icon,
   .theme-icon {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -39,7 +39,8 @@ $nav-height: 70px;
 }
 
 // right navbar elements
-.navbar .right .icon svg {
+.navbar .right .icon svg,
+.navbar .right .theme-icon svg {
   height: 30px;
   width: 30px;
 
@@ -53,8 +54,215 @@ $nav-height: 70px;
   }
 }
 
+.navbar .nav-item .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    .item-label {
+      transform: scale(1) translateY(10px);
+      transition: transform 0ms ease-in;
+    }
+  }
+
+  .item-label {
+    position: fixed;
+    transform: scale(0) translateY(-30px);
+    transition: transform 500ms ease-out;
+    opacity: 0.8;
+    top: 40px;
+  }
+}
+
 .navbar .right {
   width: 18vw;
   display: flex;
   justify-content: space-between;
+}
+
+.navbar .left .nav-item .text {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    background: transparent;
+    padding: 0;
+    width: 100%;
+    box-shadow: none;
+    flex-direction: column;
+  }
+
+  .navbar .left {
+    padding: 1rem;
+    box-shadow: var(--nav-shadow);
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .theme-icon {
+      display: unset !important;
+    }
+  }
+
+  .navbar .right {
+    padding: 2rem 0;
+    flex-direction: column;
+    justify-content: unset;
+
+    $shadow: 4px 10px 10px var(--shadow-color);
+    box-shadow: $shadow;
+
+    height: 100vh;
+    margin-top: 6.5rem;
+
+    position: fixed;
+    width: 85%;
+
+    transform: translateX(-50rem);
+    transition: all 500ms ease-in-out;
+
+    .nav-item {
+      width: 80%;
+    }
+  }
+
+  .navbar .right .nav-item,
+  .navbar .left .nav-item {
+    margin: 1rem;
+  }
+
+  .right-nav-slide-in {
+    transform: translateX(0rem) !important;
+  }
+
+  .right-nav-slide-out {
+    transform: translateX(-50rem) !important;
+  }
+
+  .navbar .right .nav-item:last-of-type {
+    margin-right: 2rem;
+  }
+
+  /* Bar menu animation */
+
+  .navbar .left .menu-icon {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 39px;
+    height: 5.2px;
+    margin: 3px 0;
+    transition: 0.4s;
+    border-radius: 40px;
+  }
+
+  .bar1 {
+    width: 17px;
+  }
+
+  .bar2 {
+    width: 28px;
+  }
+
+  .bar1,
+  .bar3 {
+    background: hsl(271, 100%, 51%);
+  }
+
+  .bar2 {
+    opacity: 0.6;
+    background: hsl(251, 100%, 61%);
+  }
+
+  .toggle-menu-icon .bar1 {
+    width: 39px;
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .toggle-menu-icon .bar2 {
+    width: 39px;
+    opacity: 0;
+  }
+
+  .toggle-menu-icon .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  .navbar .right .nav-item::after {
+    content: "";
+    position: relative;
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: yellowgreen;
+    transform: scaleX(0);
+    transform-origin: 0%;
+    transition: transform 500ms ease;
+    top: 2px;
+  }
+
+  .navbar .right .nav-item:hover {
+    border-color: transparent;
+  }
+
+  .navbar .right .nav-item:hover::after {
+    transform: scaleX(1);
+  }
+
+  .menu-icon:hover {
+    cursor: pointer;
+  }
+
+  .navbar .right .nav-item .nav-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start !important;
+
+    .text {
+      display: unset !important;
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      padding-left: 1.1rem;
+    }
+  }
+
+  .navbar .right .icon svg,
+  .navbar .right .theme-icon svg {
+    height: 40px;
+    width: 40px;
+  }
+
+  .tag {
+    display: none !important;
+  }
+
+  .navbar .nav-item .logo {
+    font-size: 1.6em;
+  }
+
+  .navbar .left .theme-icon svg {
+    height: 40px;
+    width: 40px;
+
+    .fa-primary {
+      fill: hsl(271, 100%, 51%);
+    }
+
+    .fa-secondary {
+      fill: hsl(251, 100%, 61%);
+      opacity: 0.8;
+    }
+  }
 }
