@@ -11,7 +11,7 @@ interface MiniContentListProps {
 
 function MiniContentList(props: MiniContentListProps) {
   return (
-    <>
+    <div className="mini-content-wrapper">
       {props.contentMap &&
         Object.keys(props.contentMap).map((heading: string, idx: number) => (
           <ContentList
@@ -23,7 +23,7 @@ function MiniContentList(props: MiniContentListProps) {
             )}
           />
         ))}
-    </>
+    </div>
   );
 }
 
