@@ -1,3 +1,6 @@
+import fs from "fs";
+import path from "path";
+
 interface ContentInterface {
   title: string;
   description: string;
@@ -119,9 +122,79 @@ class Content {
     contents: Content[],
     ascending = true
   ) => {
-    if (ascending) contents.sort((a, b) => (a.lastmod < b.lastmod ? -1 : 1));
-    else contents.sort((a, b) => (a.lastmod > b.lastmod ? -1 : 1));
+    if (ascending)
+      return contents.sort((a, b) => (a.lastmod < b.lastmod ? -1 : 1));
+    else return contents.sort((a, b) => (a.lastmod > b.lastmod ? -1 : 1));
+  };
+
+  /**
+   * This will create an object where key will be heading and
+   *
+   */
+  static createContentMap = (contents: Content[], baseDir: string) => {
+    let contentMap: { [key: string]: Content[] } = {};
+    let baseDirInfo = baseDir.split(path.sep);
+
+    contents.forEach((content: Content) => {
+      const pathList = content.filePath.split(path.sep);
+
+      // This path will be a dir whose first parent baseDir
+      const parentDirUnderBaseDir = pathList[baseDirInfo.length];
+
+      if (Object.keys(contentMap).includes(parentDirUnderBaseDir))
+        if (fs.lstatSync(path.join(baseDir, parentDirUnderBaseDir)).isFile())
+          contentMap["Other Posts"].push(content);
+        else contentMap[parentDirUnderBaseDir].push(content);
+      else {
+        if (fs.lstatSync(path.join(baseDir, parentDirUnderBaseDir)).isFile())
+          contentMap["Other Posts"] = [content];
+        else contentMap[parentDirUnderBaseDir] = [content];
+      }
+    });
+
+    return contentMap;
   };
 }
+
+// Get the ".md" file paths recursively
+export const getAllFilePathsFromFolder = (basePath: string) => {
+  let paths = [];
+
+  if (fs.lstatSync(basePath).isDirectory()) {
+    const folders = fs.readdirSync(basePath);
+    folders.forEach((folder: string) => {
+      let fileExtension = folder.split(".")[folder.split(".").length - 1];
+      if (fileExtension === "md") paths.push(path.join(basePath, folder));
+      else {
+        if (fs.lstatSync(path.join(basePath, folder)).isDirectory()) {
+          const innerFilePaths = getAllFilePathsFromFolder(
+            path.join(basePath, folder)
+          );
+          paths = [...paths, ...innerFilePaths];
+        }
+      }
+    });
+  } else if (fs.lstatSync(basePath).isFile()) {
+    let fileExtension = basePath.split(".")[basePath.split(".").length - 1];
+    if (fileExtension === "md") paths.push(basePath);
+  }
+
+  return paths;
+};
+
+// Read markdown data
+export const getContents = (basePath: string): Content[] => {
+  let contents: Content[] = [];
+
+  const filePaths = getAllFilePathsFromFolder(basePath);
+  filePaths.forEach((filePath: string) => {
+    const content = fs.readFileSync(filePath).toString();
+    contents.push(
+      new Content(Content.extractMetaDataFromContentStr(content, filePath))
+    );
+  });
+
+  return contents;
+};
 
 export default Content;
