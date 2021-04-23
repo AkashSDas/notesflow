@@ -1,25 +1,36 @@
 import { GetStaticProps } from "next";
+import MiniContentList from "../components/content/MiniContentList";
 import Content, { getContents } from "../lib/content";
 
-export default function Home(props) {
+interface HomeProps {
+  contents: Content[];
+}
+
+export default function Home(props: { contentsMap: string }) {
   return (
     <main>
-      <div></div>
+      <MiniContentList
+        contentMap={JSON.parse(props.contentsMap)}
+        howManyToDisplay={4}
+      />
     </main>
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  let contents = getContents("contents");
+export const getStaticProps: GetStaticProps = async (): Promise<{
+  props: { contentsMap: string };
+}> => {
   // sorting content in descending order
-  contents = Content.sortContentsWithLastModDate(
-    getContents("contents"),
-    false
+  let contentsMap = Content.createContentMap(
+    Content.sortContentsWithLastModDate(getContents("contents"), false),
+    "contents"
   );
 
-  console.log(Object.keys(Content.createContentMap(contents, "contents")));
-
   return {
-    props: {},
+    props: {
+      // Cannot pass object directly, so stringifying it here and parsing it
+      // at the destination
+      contentsMap: JSON.stringify(contentsMap),
+    },
   };
 };

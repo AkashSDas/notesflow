@@ -6,6 +6,7 @@ interface MiniContentListProps {
     // key here is heading for the content list
     [key: string]: Content[];
   };
+  howManyToDisplay: number;
 }
 
 function MiniContentList(props: MiniContentListProps) {
@@ -16,7 +17,10 @@ function MiniContentList(props: MiniContentListProps) {
           <ContentList
             key={idx}
             heading={heading}
-            contents={props.contentMap[heading]}
+            contents={props.contentMap[heading].splice(
+              0,
+              props.howManyToDisplay
+            )}
           />
         ))}
     </>

@@ -6,6 +6,8 @@ interface ContentListProps {
 }
 
 function ContentList(props: ContentListProps) {
+  console.log(typeof props.contents);
+
   return (
     <section className="content-section">
       <h2>{props.heading}</h2>
