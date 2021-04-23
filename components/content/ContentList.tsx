@@ -6,11 +6,24 @@ interface ContentListProps {
 }
 
 function ContentList(props: ContentListProps) {
-  console.log(typeof props.contents);
+  const formatHeadingText = (text: string) => {
+    let words = text.split("-");
+    for (let i = 0; i < words.length; i++) {
+      words[i] = `${words[i][0].toUpperCase()}${words[i].slice(1)}`;
+    }
+    text = words.join(" ");
+    return text;
+  };
+
+  const tagBtn = (tag: string, key: number) => (
+    <span key={key} className={`tag tag-sm tag-${tag}`}>
+      #{tag}
+    </span>
+  );
 
   return (
     <section className="content-section">
-      <h2>{props.heading}</h2>
+      <h2>{formatHeadingText(props.heading)}</h2>
 
       <div className="hr"></div>
 
@@ -21,16 +34,22 @@ function ContentList(props: ContentListProps) {
               <li key={idx} className="list-item">
                 <div className="vertical-line"></div>
 
-                <div className="cover-img">
+                {/* <div className="cover-img">
                   <img
-                    src={`${content.coverImageUrl}`}
+                    src={`${content.coverGifUrl}`}
                     alt={`${content.title}`}
                   />
-                </div>
+                </div> */}
 
                 <div className="content-info">
                   <h3>{content.title}</h3>
                   <p>{content.description}</p>
+
+                  <div className="tags-group">
+                    {content.tags.map((tag: string, idx: number) =>
+                      tagBtn(tag, idx)
+                    )}
+                  </div>
                 </div>
               </li>
             );
