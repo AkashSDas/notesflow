@@ -1,0 +1,48 @@
+---
+title: Equity Market Capitalization 101
+description: Understand is equity market cap.
+tags:
+  - stock-market
+  - 101
+  - equity-market-cap
+lastmod: 2021-04-24T20:11:06-05:00
+publishdate: 2021-04-24T20:11:06-05:00
+coverImageUrl: ""
+coverGifUrl: ""
+---
+
+## Table of contents
+
+## Introduction
+
+---
+
+Equity market capitalization is an aggregate calculation that measures the `total value of the entire equity market`. This value is calculated bytaking the individual market capitalizations of all available companies in the equity market and adding them together to arrive at the capitalization for the market as a whole.
+
+Equity market cap is used to roughly gauge changes in the size of the economy, to track inflows or outflows from equities to other markets, and to compare the size of the stock market to other asset classes. Because an individual company's market cap is a moving target, equity market capitalization is only a rough measure.
+
+## Understanding Equity Market Capitalization
+
+---
+
+Changes in equity market capitalization are used to compare increases or decreases in the size of the market as a whole. The measure is also used to compare the value of the equity market relative to the values of markets of other asset classes, such as the bond market or other segments of the economy, including the value of the real estate market.
+
+**Market capitalization (or "market cap") refers to the total dollar market value of a company's outstanding shares as derived from its share price**. Market cap is thus calculated by multiplying the number of a company's shares outstanding by the current market price of one share. The investment community uses this figure to determine a company's size. A company's size is a basic determinant of various characteristics—such as riskiness or volatility—that is of interest to investors. It is also easy to calculate. For example, a company with 20 million shares outstanding that sell at $100 per share would have a market cap of $2 billion.
+
+## Limitations of Equity Market Capitalization
+
+---
+
+Although it is often used to describe the size of a company, **market cap does not measure the equity value of a company**. Only a thorough analysis of a company's fundamentals can measure a company's true value. Using equity market capitalization to value a company is inadequate because the market price on which it is based does not necessarily reflect how much a piece of the business is worth. Shares are often overvalued or undervalued by the market, which means that the market price only determines how much the market is willing to pay for a company's shares.
+
+Although it measures the cost of buying all of a company's shares, the market cap does not determine the amount the company would cost to acquire in a merger or acquisition (M&A) transaction. A better method of calculating the price of acquiring a business outright is the company's enterprise value.
+
+Two primary factors can further alter a company's market cap: significant changes in the price of a stock or when a company issues or repurchases shares. **An investor who exercises a large number of warrants can also increase the number of shares on the market and negatively affect shareholders in a process known as dilution**. Because of these factors, equity market capitalization, which is a composite sum of all the market caps of all equities in a market, is not a good measure for ascertaining the value of an equity market; only the size.
+
+## Fund Flows and Equity Market Capitalization
+
+---
+
+**Fund flows are the net of all cash inflows and outflows in and out of various financial assets**. Fund flow is usually measured on a monthly or quarterly basis; the performance of an asset or fund is not taken into account, only share redemptions, or outflows, and share purchases, or inflows. Net inflows create excess cash for managers to invest, which theoretically creates demand for securities such as stocks and bonds.
+
+Investors and market analysts watch fund flows to gauge investor sentiment within specific asset classes, sectors, or the market as a whole. For instance, if net fund flows for equity funds during a given month are negative, reducing equity market capitalization by a large amount, this may signal broad-based pessimism over the stock market.
