@@ -17,7 +17,7 @@ function ContentList(props: ContentListProps) {
   };
 
   const tagBtn = (tag: string, key: number) => (
-    <span key={key} className={`tag tag-sm tag-${tag}`}>
+    <span key={key} className={`tag tag-sm tag-contrast tag-${tag}`}>
       #{tag}
     </span>
   );
