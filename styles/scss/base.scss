@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 
 $colors: (
   // green: #3ba853,
@@ -14,14 +17,14 @@ $colors: (
   pink: #ff4088
 );
 
-$gray-colors: (
-  gray1: #ffffff,
-  gray2: #fefefe,
-  gray3: #ebebeb,
-  gray4: #8d8d8d,
-  gray5: #282828,
-  gray6: #232323,
-);
+// $gray-colors: (
+//   gray1: #ffffff,
+//   gray2: #fefefe,
+//   gray3: #ebebeb,
+//   gray4: #8d8d8d,
+//   gray5: #282828,
+//   gray6: #232323,
+// );
 
 @mixin default-theme {
   --background: var(--gray6);
@@ -45,18 +48,18 @@ $gray-colors: (
 }
 
 .light-theme {
-  --background: var(--gray2);
+  --background: var(--gray0);
   --text-color: var(--gray5);
   --h-color: var(--gray6);
-  --text-color-2: #454e56;
+  --text-color-2: var(--gray5);
 
-  --card-bg: var(--gray1);
-  --card-hover-bg: var(--gray3);
+  --card-bg: #fff;
+  --card-hover-bg: #ebebeb;
 
   --blue-vertical-line-color: var(--blue-light);
 
   --code-color: var(--purple-dark);
-  --code-bg: var(--gray3);
+  --code-bg: var(--gray1);
 
   --nav-color: var(--gray2);
   --nav-icon-color: var(--blue-dark);
@@ -76,12 +79,23 @@ $gray-colors: (
     --#{$name}-light: #{lighten($color, 7%)};
   }
 
-  @each $gray, $color in $gray-colors {
-    --#{$gray}: #{$color};
-  }
+  // @each $gray, $color in $gray-colors {
+  //   --#{$gray}: #{$color};
+  // }
 
-  --font-head: "Prompt", sans-serif;
-  --font-body: "Jost", sans-serif;
+  --gray0: #f8f8f8;
+  --gray1: #dbe1e8;
+  --gray2: #b2becd;
+  --gray3: #6c7983;
+  --gray4: #454e56;
+  --gray5: #2a2e35;
+  --gray6: #12181b;
+
+  // --font-head: "Prompt", sans-serif;
+  --font-head: "Open Sans", sans-serif;
+  // --font-body: "Jost", sans-serif;
+  --font-body: "Source Code Pro", monospace;
+  // --font-body: "Fira Code", monospace;
   --font-size: 20px;
 
   --green-grad: linear-gradient(

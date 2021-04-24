@@ -1,6 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import path from "path";
 import ReactMarkdown from "react-markdown";
+import remarkslug from "remark-slug";
+// import toc from "remark-toc";
 import Content, {
   getAllFilePathsFromFolder,
   getContent,
@@ -40,7 +42,9 @@ function ContentPage(props: ContentPageProps) {
       {/* <img src={`${content.coverGifUrl}`} alt={`${content.title}`} /> */}
 
       <section className="react-markdown-content">
-        <ReactMarkdown>{content.content}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkslug]}>
+          {content.content}
+        </ReactMarkdown>
       </section>
     </main>
   );

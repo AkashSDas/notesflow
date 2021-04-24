@@ -14,7 +14,9 @@ $nav-height: 70px;
 
   box-shadow: var(--nav-shadow);
 
-  position: fixed;
+  // to make the heading visible, when heading anchors
+  // are clicked and we scroll to the heading
+  // position: fixed;
 }
 
 .navbar .navbar-nav {
