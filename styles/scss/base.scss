@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 
@@ -40,6 +40,11 @@ $colors: (
   --code-color: var(--purple-light);
   --code-bg: var(--gray5);
 
+  --tag-contrast-bg: var(--text-color);
+  --tag-contrast-color: var(--text-color-2);
+
+  --em-color: var(--gray0);
+
   --nav-color: var(--gray5);
   --nav-icon-color: var(--blue-light);
   --nav-shadow: 4px 4px 10px -3px #010101;
@@ -55,6 +60,11 @@ $colors: (
 
   --card-bg: #fff;
   --card-hover-bg: #ebebeb;
+
+  --tag-contrast-bg: var(--gray2);
+  --tag-contrast-color: var(--gray5);
+
+  --em-color: var(--gray6);
 
   --blue-vertical-line-color: var(--blue-light);
 
