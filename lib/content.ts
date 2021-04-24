@@ -110,9 +110,9 @@ class Content {
     const coverImageUrl = splitFromColorForUrls(contentList[tagCounter + 2]);
     const coverGifUrl = splitFromColorForUrls(contentList[tagCounter + 3]);
 
-    // +4 to skip two '---' and blank lines
+    // +3 to skip one '---' and 2 blank lines
     const postContent = contentList
-      .splice(tagCounter + 3 + 4, contentList.length)
+      .splice(tagCounter + 3 + 3, contentList.length)
       .join("\n");
 
     const fileName = filePath.split(path.sep)[
