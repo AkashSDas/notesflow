@@ -15,8 +15,8 @@
 }
 
 .tag-contrast {
-  background: var(--text-color-2);
-  color: var(--background);
+  background: var(--tag-contrast-bg);
+  color: var(--tag-contrast-color);
 }
 
 // TAGS
@@ -41,13 +41,22 @@
   background: var(--purple-light);
 }
 
-.tag-revenues,
-.tag-expenses {
-  background: var(--text-color);
-  color: var(--background);
-}
-
 .tag-accural-accounting {
   background: var(--pink);
   color: whitesmoke;
+}
+
+.tag-101 {
+  color: #fff;
+  background: #24292e;
+}
+
+.tag-history {
+  background: #a4c34a;
+  color: white;
+}
+
+.tag-stock-exchange {
+  background: white;
+  color: #4a8afc;
 }
