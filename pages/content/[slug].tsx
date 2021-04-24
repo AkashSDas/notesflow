@@ -26,7 +26,7 @@ function ContentPage(props: ContentPageProps) {
   );
 
   return (
-    <main>
+    <main id="content-section">
       <h1>{content.title}</h1>
 
       <div className="hr"></div>
@@ -40,7 +40,6 @@ function ContentPage(props: ContentPageProps) {
       {/* <img src={`${content.coverGifUrl}`} alt={`${content.title}`} /> */}
 
       <section className="react-markdown-content">
-        <div></div>
         <ReactMarkdown>{content.content}</ReactMarkdown>
       </section>
     </main>
