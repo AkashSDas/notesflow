@@ -17,13 +17,19 @@ coverImageUrl: ""
 coverGifUrl: ""
 ---
 
+## Table of contents
+
+## Introduction
+
+---
+
 In simple terms stock market is a `market where people buy and sell stocks`. What are stocks? You may ask… well, an individual stock is a `piece of a company`. Stocks are also known as `Shares` and `Equity`, that's why the stock market is also know as share market and equity market.
 
 > When you buy stocks of a company, you actually buy certain ownership in that company. If the company makes profit then you'll make some profit or if the company makes loss then you'll make some loss. Isn't that simple?
 
 ![](https://media.giphy.com/media/zcCGBRQshGdt6/giphy.gif)
 
-#### Example
+**Example**
 
 Let's understand this with an example. You want to start a company and have $10 but you need additional $10 to start. You go to your friend and ask for $10 in exchange of 50% of your company. Now whatever profit or loss your company will have in future 50% of that will be of your friend as he/she owns 50% shares of your company. This is exactly what happens in stock market but in a larger scale.
 
@@ -55,7 +61,7 @@ Stock Exchange is a place where come to people buy and sell stocks. This place c
 
 The primary market is the place `where companies sell their shares`. It's a company's choice on what should be the price for their shares, but there are some regulations on that. Also, a company can't increase or decrease their share price by much because it also depends on demand, how are people willing to pay for those shares.
 
-#### Example
+**Example**
 
 So if the value of a company is $100 then it can offer 100 of its shares with a price of $1 per share. If demand for those shares are high then the company can sell their shares on a much higher price. So what a company does is that it keeps a minimum price and maximum price and sell their shares in that range.
 
@@ -127,9 +133,9 @@ The process of listing of a company is long and complicated to avoid scams. Othe
 
 To make the system more strong and scam proof there are regulators. `SEBI` stands for `The Securities and Exchange Board of India` is the regulator of the securities and commodity market in India owned by the Government of India. It's main objectives are:
 
-- To safeguard the interest of the investors.
-- Ensure the Indian capital market is transparent to its investors.
-- The capital market function in a systematic manner.
+> - To safeguard the interest of the investors.
+> - Ensure the Indian capital market is transparent to its investors.
+> - The capital market function in a systematic manner.
 
 The companies who want to be publicly listed must adhere to specific mandates given by the SEBI. Otherwise, the companies may be not listed or if it is listed and violates SEBI's norms then it will be delisted.
 
@@ -141,9 +147,9 @@ The companies who want to be publicly listed must adhere to specific mandates gi
 
 To buy shares you need 3 account:
 
-- Bank Account
-- Trading Account
-- Demat Account
+> - Bank Account
+> - Trading Account
+> - Demat Account
 
 `Bank account` is where you'll have your money, `trading account` is needed to trade i.e. invest in a company and `demat or dematerialised account` will hold the shares in dematerialised or electronic form.
 
