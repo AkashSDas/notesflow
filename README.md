@@ -44,7 +44,7 @@ coverGifUrl: ""
 
 Also, after the content metadata write `## Table of contents` if you want table of content for the individual post. If you are writting `## Table of contents` line then after that start writing about the content by giving heading so that the content below `## Table of contents` doesn't get erased by the `remark-toc` plugin (used for generating table of content). Example if below.
 
-```
+```markdown
 ---
 title: Stock valuation 101
 description: Basics of stock valuation
