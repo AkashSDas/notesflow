@@ -9,11 +9,17 @@
   color: var(--text-color-2);
 }
 
+.react-markdown-content em,
+.react-markdown-content strong {
+  font-weight: bold;
+  color: var(--em-color);
+}
+
 // .react-markdown-content h2:first-of-type {
 //   display: none;
 // }
 
-.react-markdown-content ul:first-of-type {
+.react-markdown-content ul {
   margin: 2rem auto;
   background: var(--card-bg);
   padding: 1rem 2rem;
@@ -57,20 +63,22 @@
   margin-bottom: 2rem;
 }
 
+.react-markdown-content ul {
+  list-style: "▶️";
+  padding-left: 3rem;
+  font-size: 0.9em;
+
+  li {
+    margin-bottom: 1rem;
+    padding-left: 0.6em;
+  }
+}
+
 .react-markdown-content blockquote {
   border: none;
   margin: 2rem auto;
   border-left: 3.5px dashed var(--text-color-2);
   padding-left: 0.6em;
-
-  ul {
-    list-style: disclosure-closed;
-    padding-left: 3rem;
-
-    li {
-      margin-bottom: 1rem;
-    }
-  }
 }
 
 .react-markdown-content a {
@@ -85,16 +93,16 @@
 
 .react-markdown-content img {
   border-radius: 8px;
-  width: 100%;
-  margin: 3rem auto;
-  transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 40%;
+  margin: 1rem auto;
+  box-shadow: var(--nav-shadow);
 }
 
 .content-info .tags-group {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 
   span {
-    font-size: 0.8em;
-    margin: auto 0.4em;
+    font-size: 0.7em;
+    margin: 0.4em 0.4em;
   }
 }

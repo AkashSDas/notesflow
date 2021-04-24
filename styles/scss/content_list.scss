@@ -70,15 +70,16 @@
 
   p {
     color: var(--text-color-2);
-    font-size: 1.2em;
+    font-size: 0.9em;
+    margin: 1rem auto;
   }
 }
 
 .content-section .content-list .list-item .tags-group {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 
   span {
-    font-size: 0.8em;
-    margin: auto 0.4em;
+    font-size: 0.7em;
+    margin: 0.4em 0.4em;
   }
 }
