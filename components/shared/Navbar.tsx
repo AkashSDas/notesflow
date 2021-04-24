@@ -46,7 +46,7 @@ function Navbar() {
       </ul>
 
       <ul className="navbar-nav right right-nav-slide-out">
-        <NavItem navigateTo="#" icon={<TVSVG />} title="Posts" />
+        <NavItem navigateTo="/content" icon={<TVSVG />} title="Posts" />
         <NavItem navigateTo="#" icon={<ScrollSVG />} title="Write" />
         <ToggleThemeIcon themeIcon={themeIcon} setThemeIcon={setThemeIcon} />
       </ul>
