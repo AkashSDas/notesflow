@@ -19,23 +19,24 @@
   color: var(--tag-contrast-color);
 }
 
+.tag-leverage {
+  color: #313244;
+  background: #adecf3;
+}
+
 // TAGS
 
-// Stock Market
+// General
 
-.tag-stock-market {
-  background: #2775c3;
+.tag-myths {
   color: white;
+  background-image: linear-gradient(to right, #ff8901, #db1d5f);
+  font-weight: bold;
 }
 
 .tag-investing {
   background: var(--green);
   color: white;
-}
-
-.tag-short-selling {
-  background: #dc0530;
-  color: #fff;
 }
 
 .tag-101 {
@@ -48,12 +49,45 @@
   color: white;
 }
 
+.tag-business {
+  color: white;
+  background: #e10097;
+}
+
+.tag-dictionary {
+  color: white;
+  background-image: linear-gradient(to right, #e101ff, #3305ff);
+  font-weight: bold;
+}
+
+// Stock Market
+
+.tag-stock-market {
+  background: #2775c3;
+  color: white;
+}
+
+.tag-short-selling {
+  background: #dc0530;
+  color: #fff;
+}
+
 .tag-stock-exchange {
   background: white;
   color: #4a8afc;
 }
 
 .tag-stock-valuation {
+  background: var(--pink);
+  color: whitesmoke;
+}
+
+.tag-financial-ratios {
+  background: #ffcb2b;
+  color: #12181a;
+}
+
+.tag-pe-ratio {
   background: var(--pink);
   color: whitesmoke;
 }
