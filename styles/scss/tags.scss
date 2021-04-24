@@ -21,6 +21,8 @@
 
 // TAGS
 
+// Stock Market
+
 .tag-stock-market {
   background: #2775c3;
   color: white;
@@ -36,16 +38,6 @@
   color: #fff;
 }
 
-.tag-accounting {
-  color: white;
-  background: var(--purple-light);
-}
-
-.tag-accural-accounting {
-  background: var(--pink);
-  color: whitesmoke;
-}
-
 .tag-101 {
   color: #fff;
   background: #24292e;
@@ -59,4 +51,21 @@
 .tag-stock-exchange {
   background: white;
   color: #4a8afc;
+}
+
+.tag-stock-valuation {
+  background: var(--pink);
+  color: whitesmoke;
+}
+
+// Accounting
+
+.tag-accounting {
+  color: white;
+  background: var(--purple-light);
+}
+
+.tag-accural-accounting {
+  background: var(--pink);
+  color: whitesmoke;
 }

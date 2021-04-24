@@ -19,32 +19,6 @@
 //   display: none;
 // }
 
-.react-markdown-content ul {
-  margin: 2rem auto;
-  background: var(--card-bg);
-  padding: 1rem 2rem;
-  border-radius: 4px;
-  box-shadow: var(--nav-shadow);
-
-  li {
-    margin-bottom: 0.6rem;
-
-    a {
-      color: var(--blue-dark);
-      box-shadow: unset;
-
-      &:hover {
-        text-decoration: underline;
-        background-color: unset;
-      }
-    }
-
-    &:last-of-type {
-      margin-bottom: unset;
-    }
-  }
-}
-
 .react-markdown-content p {
   margin: 2rem auto;
 }
@@ -63,14 +37,53 @@
   margin-bottom: 2rem;
 }
 
+// This is just to style the table of content
+// any other <ul> tags should be wrapped
+// inside <blockquote> tags
 .react-markdown-content ul {
-  list-style: "▶️";
+  list-style: upper-alpha;
   padding-left: 3rem;
   font-size: 0.9em;
+  margin: 1.5rem auto;
 
   li {
-    margin-bottom: 1rem;
-    padding-left: 0.6em;
+    margin-bottom: 0.1rem;
+  }
+
+  p {
+    margin: 0.6em 0;
+  }
+
+  ul {
+    margin: unset;
+  }
+}
+
+.react-markdown-content blockquote ul {
+  list-style: "▶️ ";
+  margin: 2rem auto;
+  background: var(--card-bg);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  box-shadow: var(--nav-shadow);
+  padding-left: 3rem;
+
+  li {
+    margin-bottom: 0.6rem;
+
+    a {
+      color: var(--blue-dark);
+      box-shadow: unset;
+
+      &:hover {
+        text-decoration: underline;
+        background-color: unset;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: unset;
+    }
   }
 }
 
