@@ -16,7 +16,7 @@ Web app to make and store notes easy and organised.
 - Display metadata about content in individual content page
 - Display content under a specific tag
 - Display all the content (sorted by last modified datetime)
-- Add text serching feature
+- Add text searching feature
 - Convert text to audio in realtime
 
 ## Content writing info
