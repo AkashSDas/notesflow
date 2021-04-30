@@ -1,6 +1,6 @@
 # notesflow
 
-Web app to make and store notes easy and organised.
+Web app to organise all your notes.
 
 ## Table of contents
 
