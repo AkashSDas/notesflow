@@ -13,6 +13,8 @@ coverGifUrl: ""
 
 Dividend is paid on `face value`, where face value is the orignal price at which the share was bought by the promoters of a company. The face value of a company is decided by its promoters and `number of shares = money invested / face value`.
 
+So if a company has a face value of $2 and wants to give 1000% dividend then you'll get $20 (1000% of the face value i.e. $2 👉 $20).
+
 ## Difference between interest and dividends
 
 ---

@@ -63,7 +63,7 @@ coverGifUrl: ""
 
 > - `Offer price`: The best selling price.
 
-> - V`olume`: It is the number of shares that were traded during the day.
+> - `Volume`: It is the number of shares that were traded during the day.
 
 > - `Board Meeting`: It's a meeting of a company's board of directors, held usually at certain times of the year to discuss company-wide policies or issues.
 
@@ -81,7 +81,7 @@ coverGifUrl: ""
 
 > - `Trading, Clearing and Settlement`: Secondary market transactions have 3 distinct phases: trading, clearing and settlement. Stock exchanges in India feature an electronic order - matching system that facilitates efficient and speedy execution of trades. All stock exchanges in India follow a common settlement system. Trade takes place on a particular day (say T) and are settled after two business days after the trading day (say T+2). Here T and T+2 are the working dates.
 
-> - `Clearing House`: Clearinghouses such as the DTCC act as intermediaries between buyers and sellers. They exist to protect investors and the markets by making sure that participants like brokerage firms have the funds available to back up trades they make, and to determine who gets paid in the event of a default.
+> - `Clearing House`: Clearing houses such as the DTCC act as intermediaries between buyers and sellers. They exist to protect investors and the markets by making sure that participants like brokerage firms have the funds available to back up trades they make, and to determine who gets paid in the event of a default.
 
 > - `Difference between stock exchange and clearning house`: An exchange is a marketplace for trades, one that provides the match making engine and players that bring liquidity. When trades are executed and matched off, there needs to be a bank or other financial institution that will do the net settlement of funds, this is a clearing house.
 
@@ -96,3 +96,13 @@ coverGifUrl: ""
 > - `Derivatives`: Theoritical - Derivatives is a financial instrument which derive its value from an **underlying assets**. Example, if a locker has nothing in it then its key doesn't have any value, but if locker has assets then the key has value, so we can say that the key has derived its value from the value of assets in the locker. Types - `Forwards`, `Futures`, `Options`, `Swaps`. You cannot trade Forwards and Swaps. Derivatives exists primarily for `Hedging` and `Speculation`.
 
 > - `Over the counter (OTC)`: An over-the-counter (OTC) market is a decentralized market in which market participants trade stocks, commodities, currencies, or other instruments directly between two parties and without a central exchange or broker.
+
+> - In **Annual Report** you'll get how many shares are still in **physical form**.
+
+> - The **issue price** is the price at which shares are offered for sale when they first become available to the public and the **listing price** is the opening price of the share on the listing day.
+
+> - If you want to convert physical share into demat form then I'll contact to my broker then the broker will forward the work to the company (whose share I want to convert from physical to demat form) and the company forward this work to a **depository**.
+
+> - **NSDL** - National Sercurities Depository Limited
+
+> - **CDSL** - Central Depository Service Limited
