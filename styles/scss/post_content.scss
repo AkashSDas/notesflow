@@ -21,6 +21,7 @@
 
 .react-markdown-content p {
   margin: 2rem auto;
+  line-height: 1.43;
 }
 
 .react-markdown-content code {
@@ -70,6 +71,7 @@
 
   li {
     margin-bottom: 0.6rem;
+    line-height: 1.43;
 
     a {
       color: var(--blue-dark);
