@@ -40,27 +40,33 @@ function ContentList(props: ContentListProps) {
                   // },
                 }}
               >
-                <li key={idx} className="list-item">
-                  <div className="vertical-line"></div>
+                {/* Wrapping the <li> with <a> so that I can open the post in a new tab
+                    which is not possible with just <Link> 
+                    For more info follow this GitHub discussion => https://github.com/vercel/next.js/discussions/15486
+                */}
+                <a rel="noreferrer">
+                  <li key={idx} className="list-item">
+                    <div className="vertical-line"></div>
 
-                  {/* <div className="cover-img">
+                    {/* <div className="cover-img">
                   <img
                     src={`${content.coverGifUrl}`}
                     alt={`${content.title}`}
                   />
                 </div> */}
 
-                  <div className="content-info">
-                    <h3>{content.title}</h3>
-                    <p>{content.description}</p>
+                    <div className="content-info">
+                      <h3>{content.title}</h3>
+                      <p>{content.description}</p>
 
-                    <div className="tags-group">
-                      {content.tags.map((tag: string, idx: number) =>
-                        tagBtn(tag, idx)
-                      )}
+                      <div className="tags-group">
+                        {content.tags.map((tag: string, idx: number) =>
+                          tagBtn(tag, idx)
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </li>
+                  </li>
+                </a>
               </Link>
             );
           })}
