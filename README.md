@@ -18,6 +18,7 @@ Web app to organise all your notes.
 - Display all the content (sorted by last modified datetime)
 - Add text searching feature
 - Convert text to audio in realtime
+- See if there's some issue with sorting the posts as per datetime
 
 ## Content writing info
 
