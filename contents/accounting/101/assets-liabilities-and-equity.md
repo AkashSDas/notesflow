@@ -1,6 +1,6 @@
 ---
 title: Assets, Liabilities and Equity
-description: Know about bonus shares and taxes on it.
+description: Know about assets, liabilities and equity.
 tags:
   - accounting
   - 101
@@ -45,7 +45,7 @@ The part `obtained or controlled by a particular entity` in the assets definitio
 
 For example consider a business rents a building for long period of time let's say 60 years and that buildings remaining useful economic benefit is 65 years, although doesn't owns the building technically but in some sense it owns the building because they have the right to use it for majority of its remaining useful economic benefit.
 
-Following the principle of substance over form we can account for this building as an asset even though legally it isn't, this does have big implications for the accounting and tax treatment of the building.This is an over-simiplification of the situation and there are other few factors consider when making this call.
+Following the principle of substance over form we can account for this building as an asset even though legally it isn't, this does have big implications for the accounting and tax treatment of the building. This is an over-simiplification of the situation and there are other few factors consider when making this call.
 
 ### Types of Assets
 
@@ -67,7 +67,7 @@ These are assets that can be converted to cash in short time (typically a year).
 > - Account receivable
 > - Inventory
 > - Prepayments
-> - Short term investmen
+> - Short term investment
 
 #### Non-current Assets
 
@@ -116,10 +116,12 @@ Business obligations that are needed to settled down within a year from now are 
 > - Interest payable
 > - Accurals
 > - Unearned revenue (opposite of prepayment)
->   - since this is double entry bookkeeping therefore it is an liability
+>   - Since this is double entry bookkeeping therefore it is an liability
 > - Short term loans
 >   - loans that have to be paid within a year
 >   - portions of long term loans
+
+**Unearned revenue** is money received by an individual or company for a service or product that has yet to be provided or delivered.
 
 #### Non current liabilities
 

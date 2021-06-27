@@ -28,6 +28,12 @@ The stuff the business owns are **Assets** and the stuff the business owes are b
 
 By using the accounting equation we can also say that `the balance sheet is a snapshot of a business's assets, liabilities and equity at a point in time`. Also balance sheet equation is the foundation for the double-entry bookkeeping system since for each transaction `the total debits equal the total credits`.
 
+Changes over a period between 2 balance sheets are summarized in the income statement, statement of stockholder's equity and statement of cash flows.
+
+The equation can be represented by the below equation too.
+
+> - Resources = Claims on resources by outsiders + Owner
+
 ## Link between balance sheet and income statement
 
 ---

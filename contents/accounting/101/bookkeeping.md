@@ -20,7 +20,7 @@ coverGifUrl: ""
 
 > - **T-Account**: Is a visual representation of an account and it looks like a T.
 
-> - **General Ledger**: Is a place where a business stores a complete record of all its financial its financial transactions and accounts.
+> - **General Ledger**: Is a place where a business stores a complete record of all its financial transactions and accounts.
 
 > - **Double Entry Bookkeeping**: Every accounting entry has an opposite, corresponding entry in a different account. To record a transaction you need to write down both sides of it in at least two T-Accounts.
 
